@@ -1,5 +1,5 @@
 :root {
-  --background-black: #232427;
+  --background-black: #1b1f23;
   --color-white: #ffffff;
   --color-ash: #7e72723b;
   --color-ash-dark: #7e7272e1;
@@ -356,6 +356,7 @@ main > * {
   padding: 5px;
   display: flex;
   color: var(--color-ash-dark);
+  overflow-x: scroll;
 }
 
 .links::before {
@@ -432,6 +433,11 @@ main > * {
   font-size: 22px;
   color: blue;
 }
+@media (max-width: 480px) {
+  .repo-name {
+    width: 25ch;
+  }
+}
 .language-name {
   display: inline-flex;
   align-items: center;
@@ -451,6 +457,7 @@ main > * {
 .button-star {
   float: right;
   transform: translateY(-100%);
+  padding: 5px;
 }
 
 /* end of repo */
