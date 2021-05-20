@@ -4,10 +4,77 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
     <link rel="stylesheet" href="style.css" />
     <title>Github</title>
   </head>
   <body>
+    <header class="header">
+      <div class="small-screen">
+        <button class="bars">
+          <i class="fa fa-bars" aria-hidden="true"></i>
+        </button>
+        <a class="github-logo"
+          ><i class="fa fa-2x fa-github" aria-hidden="true"></i
+        ></a>
+        <a class="bell"><i class="fa fa-bell-o" aria-hidden="true"></i></a>
+      </div>
+      <nav class="nav toggle">
+        <div class="nav-1">
+          <a class="github-logo2"
+            ><i class="fa fa-2x fa-github" aria-hidden="true"></i
+          ></a>
+          <div class="search">
+            <input type="text" placeholder="Search or jump to..." />
+            <img
+              src="https://github.githubassets.com/images/search-key-slash.svg"
+              alt=""
+              class="search-key-slash"
+            />
+          </div>
+          <div class="nav-link">
+            <a href="#" class="dashboard">Dashboard</a>
+            <a href="#" class="pull-request">Pull requests</a>
+            <a href="#" class="issues">Issues</a>
+            <a href="#" class="marketplace">Marketplace</a>
+            <a href="#" class="explore">Explore</a>
+            <a href="#" class="codespaces">Codespaces</a>
+            <a href="#" class="sponsors">Sponsors</a>
+            <a href="#" class="settings">Settings</a>
+          </div>
+        </div>
+
+        <div class="thumbnail-container">
+          <a class="bell"><i class="fa fa-bell-o" aria-hidden="true"></i></a>
+          <span class="plus-caret"
+            ><span>+</span>
+            <i class="fa fa-caret-down"></i>
+          </span>
+          <a href="#" class="name-container">
+            <img
+              src=""
+              alt="logo"
+              class="thumbnail"
+              style="width: 18px; height: auto; border-radius: 50%"
+            />
+            <i class="fa fa-caret-down"></i>
+            <span class="name"></span>
+          </a>
+          <a href="#" class="sign-out">
+            <i class="fa fa-sign-out"></i>
+            Sign out
+          </a>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <div class="profile"></div>
+      <div class="links"></div>
+      <div class="repos"></div>
+    </main>
     <script src="index.js"></script>
   </body>
 </html>
