@@ -16,6 +16,7 @@ const repoCount = document.querySelector(".repo-count");
 const fullname = document.querySelector(".fullname");
 const username = document.querySelector(".username");
 const links = document.querySelectorAll(".links > *");
+const repos = document.querySelector(".repos");
 
 const github_data = {
   token: "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",
@@ -106,6 +107,33 @@ async function postData(url = "", body) {
       twitter.textContent = d.twitterUsername;
       fullname.textContent = d.name;
       username.textContent = d.login;
+
+      repos.innerHTML = d.repositories.nodes
+        .map(
+          (repo) => `
+        <div class="repo">
+        <a href="#" class="repo-name">${repo.name}</a>
+        <span class="language-name">
+        <span style="
+        background-color:  ${repo.languages.nodes[0].color};
+        border: 1px solid  ${repo.languages.nodes[0].color};
+        border-radius: 50%;
+        width: 10px;
+        font-size: 2px;
+        padding: 5px; ">&#183;</span>
+        ${repo.languages.nodes[0].name}
+        </span>
+        <span class="update">
+      Updated on  ${new Date(repo.updatedAt).toDateString().slice(4, 15)}
+        </span>
+        <button class="button-star">
+        <i class="fa fa-star-o"></i>
+        Star
+        </button>
+        </div> 
+        `
+        )
+        .join("");
     })
     .catch((error) => {
       console.error("Error:", error);

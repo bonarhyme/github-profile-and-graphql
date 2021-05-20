@@ -259,6 +259,16 @@ main {
 main > * {
   padding: 15px;
 }
+@media (min-width: 768px) {
+  main {
+    padding-left: 35px;
+    padding-right: 35px;
+  }
+  .nav-link-container {
+    padding-left: 0;
+    width: 100%;
+  }
+}
 
 .profile {
   padding: 20px;
@@ -377,3 +387,70 @@ main > * {
   opacity: 0.8;
 }
 /* end of links */
+
+/* repos  */
+.repos-container {
+  width: 100%;
+}
+
+.find-repos {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+.find-repos input {
+  margin: 10px 7px;
+  padding: 3px;
+  padding-left: 10px;
+  border-width: 1px;
+  border-color: var(--color-ash);
+  border-radius: 4px;
+  flex: 1;
+}
+
+@media (max-width: 600px) {
+  .button-group {
+    order: 3;
+    display: block;
+  }
+}
+
+.find-repos input::placeholder {
+  font-size: 12px;
+}
+
+/* end of repos */
+
+/* repo */
+.repo {
+  border-top: 1px solid var(--color-ash);
+  padding: 25px 0;
+}
+.repo-name {
+  display: block;
+  padding: 10px 0;
+  font-size: 22px;
+  color: blue;
+}
+.language-name {
+  display: inline-flex;
+  align-items: center;
+  font-size: 12px;
+  margin: 5px 9px 0 0;
+}
+
+.language-name > * {
+  margin-right: 7px;
+  font-size: 14px;
+}
+
+.update {
+  font-size: 12px;
+}
+
+.button-star {
+  float: right;
+  transform: translateY(-100%);
+}
+
+/* end of repo */
