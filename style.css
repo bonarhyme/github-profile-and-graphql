@@ -1,7 +1,8 @@
 :root {
   --background-black: #232427;
   --color-white: #ffffff;
-  --color-ash: #333333;
+  --color-ash: #7e72723b;
+  --color-ash-dark: #7e7272e1;
 }
 
 * {
@@ -10,10 +11,15 @@
 
 body {
   margin: 0;
+  overflow-x: hidden;
 }
 
 a {
   text-decoration: none;
+}
+ul {
+  list-style: none;
+  padding: 0;
 }
 
 /* Start of The three icons on small screens */
@@ -80,7 +86,8 @@ a {
   .sponsors,
   .settings,
   .sign-out,
-  .name {
+  .name,
+  .avatar-container {
     display: none;
   }
   .nav {
@@ -221,5 +228,152 @@ a {
   .name-container .name {
     padding-left: 5px;
   }
+  .avatar.seperate {
+    display: none;
+  }
 }
 /* end navbar for small screen */
+
+/* Main */
+@media (max-width: 767px) {
+  main {
+    flex-direction: column;
+  }
+
+  .image-name {
+    display: flex;
+    align-items: center;
+  }
+  .image-container {
+    flex: 1;
+    margin-right: 20px;
+  }
+  .full-name-username {
+    flex: 5;
+  }
+}
+main {
+  display: flex;
+  padding-top: 10px;
+}
+main > * {
+  padding: 15px;
+}
+
+.profile {
+  padding: 20px;
+}
+.image-container {
+  position: relative;
+}
+.avatar.seperate {
+  position: absolute;
+  top: 72%;
+  left: 79%;
+  border: 1px solid var(--color-ash);
+  border-radius: 50%;
+  padding: 7px;
+  background-color: var(--color-white);
+}
+.full-image {
+  border-radius: 50%;
+  border: 1px solid var(--color-ash);
+  min-width: 20px;
+}
+
+.avatar-container {
+  border: 1px solid var(--color-ash);
+  padding: 4px;
+  border-radius: 7px;
+}
+
+.fullname {
+  font-weight: 500;
+  color: var(--background-black);
+}
+.username {
+  color: var(--color-ash-dark);
+  margin-top: -20px;
+  font-weight: 200;
+}
+.edit-button {
+  width: 100%;
+  text-align: center;
+  padding: 5px;
+  border: 1px solid var(--color-ash);
+  border-radius: 7px;
+  background-color: var(--color-white);
+  margin: 7px 0;
+}
+.edit-button:hover {
+  background-color: var(--color-ash);
+}
+.user-follow {
+  margin: 7px 0;
+}
+
+.user-follow a {
+  color: var(--background-black);
+}
+
+.followers-count,
+.followings-count,
+.stars-count {
+  font-weight: 600;
+}
+
+.contact li {
+  padding-top: 7px;
+  color: var(--background-black);
+}
+
+/* End of main */
+
+/* Start user profile */
+.fa-link {
+  transform: rotate(90deg);
+}
+.fa-dot {
+  font-size: 18px;
+  color: var(--background-black);
+}
+
+/* End user profile */
+
+/* Links */
+.links {
+  position: relative;
+  padding: 5px;
+  display: flex;
+  color: var(--color-ash-dark);
+}
+
+.links::before {
+  content: "";
+  background-color: var(--color-ash);
+  position: absolute;
+  top: 50px;
+  height: 1px;
+  width: 7000px;
+  transform: translateX(-3500px);
+  z-index: -1;
+}
+.links > * {
+  padding: 14px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.links > *:hover {
+  border-bottom: 2px solid var(--color-ash-dark);
+}
+.overview {
+  padding-left: 0;
+}
+
+.links svg {
+  margin-right: 10px;
+  opacity: 0.8;
+}
+/* end of links */
